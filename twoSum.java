@@ -4,8 +4,7 @@
  * reduce the time of finding complement from O(n) to O(1). Because we
  * do the check before put, so it is not a problem for duplicate elements.
  */
-import java.util.*;
-public class twoSum {
+public class Solution {
 	public int[] twoSum(int[] nums, int target) {
 		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 		int i, len, complement;
