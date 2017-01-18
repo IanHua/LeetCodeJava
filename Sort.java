@@ -43,7 +43,7 @@ public class Sort {
 		// pick last element as pivot
 		int pivot = nums[end];
 		int left = start, right = end - 1;
-		// swap small elements and large elements
+		// use left and right to swap small elements and large elements
 		while (left < right) {
 			while (nums[left] < pivot && left < right) left++;
 			while (nums[right] > pivot && left < right) right--;
