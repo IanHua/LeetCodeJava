@@ -3,7 +3,7 @@
  * Divide and conquer
  * 1. n = m: update while others match
  * 2. n - m == 1: append or insert while others match
- * O(n)
+ * O(n) 
  */
 public boolean isOneEditDistance(String s, String t) {
 	int m = s.length(), n = t.length();
