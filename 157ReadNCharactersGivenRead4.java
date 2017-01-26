@@ -1,6 +1,7 @@
 /*
  * 157. Read N Characters Given Read4
- * 
+ * Repeatedly read 4 bytes every time from a file
+ * Notice the remaining bytes
  * O(n)
  */
 public class Solution extends Reader4 {
