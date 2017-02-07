@@ -1,8 +1,9 @@
 /**
  * 124. Binary Tree Maximum Path Sum
- * O(n)
  * findMax finds max path sum for each side
  * maxSum connects both sides and maintains the sum
+ * O(n)
+ *
  * Definition for a binary tree node.
  * public class TreeNode {
  *     int val;
