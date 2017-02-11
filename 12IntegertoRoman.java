@@ -2,7 +2,7 @@
  * 12. Integer to Roman
  * I - 1; V - 5; X - 10; L - 50; C - 100; D - 500; M - 1000
  * Use tables to look up value and its roman literal
- * Minus from big value to small value
+ * Minus from big value to small value 
  * O(n)
  */
 public class Solution {
