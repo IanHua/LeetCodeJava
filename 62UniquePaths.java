@@ -2,7 +2,7 @@
  * 62. Unique Paths
  * Combination: C(m+n-2,m-1)
  * Notice overflow, use long to store result
- * O(n)
+ * O(m)
  */
 public class Solution {
     public int uniquePaths(int m, int n) {
