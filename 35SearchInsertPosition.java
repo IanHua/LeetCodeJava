@@ -1,7 +1,7 @@
 /**
  * 35. Search Insert Position
  * Binary Search
- * while (base <= top)
+ * while (base <= top) 
  * O(logn)
  */
 public class Solution {
