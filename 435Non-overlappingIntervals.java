@@ -2,7 +2,7 @@
  * 435. Non-overlapping Intervals
  * First sort intervals using TreeMap
  * Greedy to update ans and prevValue
- * O(n)
+ * O(nlogn)
  * Definition for an interval.
  * public class Interval {
  *     int start;
