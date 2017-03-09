@@ -2,7 +2,7 @@
  * 64. Minimum Path Sum
  * dp[i][j]: min sum upto grid[i][j]
  * dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j]
- * O(n^2)
+ * O(row*col)
  */
 public class Solution {
     public int minPathSum(int[][] grid) {
