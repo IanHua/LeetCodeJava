@@ -2,7 +2,7 @@
  * 496. Next Greater Element I
  * Store (value -> position) pairs in HashMap beforehand for 
  * looking up the position of each value in findNums
- * O(n)
+ * O(n*m)
  */
 public class Solution {
     public int[] nextGreaterElement(int[] findNums, int[] nums) {
