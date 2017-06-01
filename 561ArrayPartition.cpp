@@ -2,7 +2,7 @@
  * 561. Array Partition I
  * The first C++ solution in LeetCode
  * Just sort and pick every minimum
- * O(nlogn)
+ * O(nlogn) 
  */
 class Solution {
 public:
