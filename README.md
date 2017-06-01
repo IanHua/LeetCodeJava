@@ -1,2 +1,2 @@
-# LeetCodeJava
-My LeetCode Solutions with Java
+# myLeetCode
+My LeetCode Solutions.
