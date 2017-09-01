@@ -8,6 +8,6 @@ class Solution {
                 row.set(j, row.get(j) + row.get(j+1));
             }
         }
-        return row;
+        return row; 
     }
 }
