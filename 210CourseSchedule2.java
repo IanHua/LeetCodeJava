@@ -16,18 +16,17 @@ class Solution {
         for (int i = 0; i < indegree.length; i++) {
             if (indegree[i] == 0) {
                 queue.add(i);
-                ans.add(i);
             }
         }
         while (!queue.isEmpty()) {
             int v = queue.poll();
+            ans.add(v);
             cnt++;
             Set<Integer> adj = graph.get(v);
             for (Integer j : adj) {
                     indegree[j]--;
                     if (indegree[j] == 0) {
                         queue.add(j);
-                        ans.add(j);
                     }
             }
         }
