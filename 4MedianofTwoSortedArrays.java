@@ -1,36 +1,32 @@
-/*class Solution {
+class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         if (nums1 == null || nums2 == null) return 0;
         int len1 = nums1.length;
         int len2 = nums2.length;
         List<Integer> array = new ArrayList<>();
         int cur1 = 0, cur2 = 0;
-        while (cur1 < len1 && cur2 < len2) {
-            if (nums1[cur1] <= nums2[cur2]) {
-                array.add(nums1[cur1]);
-                cur1++;
-            } else {
-                array.add(nums2[cur2]);
-                cur2++;
-            }
+        int len = (len1 + len2) / 2 + 1;
+        while (array.size() < len && (cur1 < len1 || cur2 < len2)) {
+            if (cur1 < len1 && cur2 < len2) {
+                if (nums1[cur1] <= nums2[cur2]) {
+                    array.add(nums1[cur1]);
+                    cur1++;
+                } else {
+                    array.add(nums2[cur2]);
+                    cur2++;
+                } 
+            } 
+            else if (cur1 == len1 && cur2 < len2) array.add(nums2[cur2++]);
+            else if (cur1 < len1 && cur2 == len2) array.add(nums1[cur1++]);
         }
-        if (cur1 < len1 && cur2 == len2) {
-            for (int i = cur1; i < len1; i++) {
-                array.add(nums1[i]);
-            }
-        } else if (cur1 == len1 && cur2 < len2) {
-            for (int i = cur2; i < len2; i++) {
-                array.add(nums2[i]);
-            }
-        }
-        if (array.size() % 2 == 1) {
-            return (double) array.get(array.size() / 2);
+        if ((len1 + len2) % 2 == 1) {
+            return array.get(array.size() - 1);
         } else {
-            return (array.get(array.size() / 2 - 1) + array.get(array.size() / 2)) / 2.0;
+            return (array.get(array.size() - 1) + array.get(array.size() - 2)) / 2.0;
         }
     }
-}*/
-class Solution {
+}
+/*class Solution {
     public double findMedianSortedArrays(int[] A, int[] B) {
         int m = A.length;
         int n = B.length;
@@ -65,4 +61,4 @@ class Solution {
         }
         return 0.0;
     }
-}
+}*/
