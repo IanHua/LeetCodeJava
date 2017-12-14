@@ -7,13 +7,7 @@ class Solution {
             public int compare(Integer a, Integer b) {
                 String s1 = String.valueOf(a) + String.valueOf(b);
                 String s2 = String.valueOf(b) + String.valueOf(a);
-                if (s1.compareTo(s2) > 0) {
-                    return -1;
-                } else if (s1.compareTo(s2) == 0){
-                    return 0;
-                } else {
-                    return 1;
-                }
+                return s2.compareTo(s1);
             }
         };
         PriorityQueue<Integer> pq = new PriorityQueue<>(n, cmp);
