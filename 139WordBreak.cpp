@@ -1,31 +1,19 @@
 class Solution {
-public:
-    bool wordBreak(string s, vector<string>& wordDict) {
-        if (wordDict.size() == 0) return false;
-        bool dp[s.length()+1] = {false};
-        dp[0] = true;
-        
-        for (int i = 1; i <= s.length(); i++) {
-            for(int j = i - 1; j >= 0; j--) {
-                if(dp[j]) {
-                    string word = s.substr(j, i-j);
-                    if(find(wordDict, word)) {
-                        dp[i] = true;
-                        break;
+    public boolean wordBreak(String s, List<String> dict) {
+        boolean[] f = new boolean[s.length() + 1];
+        f[0] = true;
+        for(int i = 1; i <= s.length(); i++){
+            for(String str: dict){
+                if(str.length() <= i){
+                    if(f[i - str.length()]){
+                        if(s.substring(i-str.length(), i).equals(str)){
+                            f[i] = true;
+                            break;
+                        }
                     }
                 }
             }
-        }
-        return dp[s.size()];
+        }  
+        return f[s.length()];
     }
-    
-    
-    bool find(vector<string>& wordDict, string word) {
-        for (vector<string>::iterator iter = wordDict.begin(); iter != wordDict.end(); iter++) {
-            if (*iter == word) {
-                return true;
-            }
-        }
-        return false;
-    }
-};
+}
